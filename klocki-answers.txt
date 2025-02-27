@@ -1,0 +1,11 @@
+?- na(d,c). - true
+?- na(c,a). - true
+?- na(b,c). - false
+?- na(X,c). - X = d
+?- na(c,X). - X = a; X = b (klawisz ; wyswietla wiecej mozliwosci jesli krusor miga)
+?- na(X,Y). - X = c, Y = a ; X = c,Y = b ; X = d,Y = c.
+?- na(_,c). - true
+?- na(c,_). - true; true
+?- na(X,c),na(c,Y). - X = d, Y = a ; X = d, Y = b.
+
+
