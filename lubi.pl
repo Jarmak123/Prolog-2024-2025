@@ -8,12 +8,28 @@
 % opis: spełniony, gdy klocek x leży
 % bezpośrednio na klocku Y
 % -----------------------------------------------na/2
-           na(c,a).
-           na(c,b).
-           na(d,c).
-           pod(X,Y):-na(Y,X).
-	   miedzy(X,Y,Z):-na(Z,X),na(X,Y).
-	   miedzy(X,Y,Z):-na(Y,X),na(X,Z).
+	   jaorsz(ola).
+           jarosz(ewa).
+           jarosz(jan).
+           jarosz(pawel).
+           niepalacy(ola).
+           niepalacy(ewa).
+           niepalacy(jan).
+           czyta(ola).
+           czyta(iza).
+           czyta(piotr).
+           sport(ola).
+           sport(jan).
+           sport(piotr).
+           sport(pawel).
+           lubi(ola,X):-jarosz(X),sport(X).
+	   lubi(ewa,X):-jarosz(X),niepalacy(X).
+	   lubi(iza,X):-czyta(X).
+	   lubi(iza,X):-sport(X),niepalacy(X).
+	   lubi(jan,X):-sport(X).
+	   lubi(piotr,X):-sport(X),jarosz(X).
+	   lubi(piotr,X):-czyta(X).
+	   lubi(pawel,X):-jarosz(X),sport(X),czyta(X).
 % -----------------------------------------------na/2
 
 /*

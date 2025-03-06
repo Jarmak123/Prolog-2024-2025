@@ -8,12 +8,16 @@
 % opis: spełniony, gdy klocek x leży
 % bezpośrednio na klocku Y
 % -----------------------------------------------na/2
-           na(c,a).
-           na(c,b).
-           na(d,c).
-           pod(X,Y):-na(Y,X).
-	   miedzy(X,Y,Z):-na(Z,X),na(X,Y).
-	   miedzy(X,Y,Z):-na(Y,X),na(X,Z).
+lubi(marcin,gitara).
+lubi(magda,czyta).
+lubi(piotr,gitara).
+lubi(ola,sport).
+lubi(ania,X):-lubi(magda,X).
+wspolne(X,Y):-lubi(X,Z),lubi(Y,Z).
+lubi(X,gitara).
+lubi(magda,X).
+lubi(_,czyta).
+wspolne(magda,marcin).
 % -----------------------------------------------na/2
 
 /*

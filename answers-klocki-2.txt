@@ -1,0 +1,14 @@
+?- pod(c,d). 
+true.
+?- pod(X,c). 
+X = a ;
+X = b.
+?- pod(_,d).
+false.
+?- miedzy(c,d,a).
+true.
+?- miedzy(X,b,d).
+X = c.
+?- miedzy(_,a,d).
+true.
+
