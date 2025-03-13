@@ -1,0 +1,11 @@
+?- trace.
+true.
+
+[trace]  ?- dziadek(X,piotr).
+   Call: (10) dziadek(_16908, piotr) ? creep
+   Call: (11) ojciec(_16908, _18156) ? creep
+   Exit: (11) ojciec(karol, jan) ? creep
+   Exit: (10) dziadek(karol, piotr) ? creep
+X = karol .
+
+-------

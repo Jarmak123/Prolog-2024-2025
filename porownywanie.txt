@@ -1,0 +1,44 @@
+f(a,X,f(g(y))) f(V,h(2,V),f(V))
+V=a
+f(a,X,f(g(Y))) f(a,h(2,a),f(a))
+X=h(2,a)
+f(a,h(2,a),f(g(Y))) f(a,h(2,a),f(a))
+a=/=g(Y)  Nie da sie uzgodnić
+
+?-f(a,X,f(g(Y))) = f(V,h(2,V),f(V)) - false.
+
+------------
+f(a,X,f(g(Y))) f(Y,f(Z),f(Z))
+Y=a
+f(a,X,f(g(a))) f(a,f(Z),f(Z))
+X=f(Z)
+f(a,f(Z),f(g(a))) f(a,f(Z),f(Z))
+Z=g(a)
+f(a,f(g(a)),f(g(a))) f(a,f(g(a)),f(g(a)))
+Y=a, X=f(Z), Z=g(a)
+
+?- f(a,X,f(g(Y))) = f(Y,f(Z),f(Z)).
+X = f(g(a)),
+Y = a,
+Z = g(a).
+------------
+f(f(X),Y,a) f(f(g(Y)),c,Z)
+Z=a
+f(f(X),Y,a) f(f(g(Y)),c,a)
+Y=c
+f(f(X),c,a) f(f(g(c)),c,a)
+X=f(g(c))
+f(f(g(c)),c,a) f(f(g(c)),c,a)
+Z=a,Y=c,X=f(g(c))
+
+?- f(f(X),Y,a) = f(f(g(Y)),c,Z).
+X = g(c),
+Y = c,
+Z = a.
+------------
+
+
+
+
+
+
