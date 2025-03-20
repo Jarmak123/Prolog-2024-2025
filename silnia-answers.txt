@@ -1,0 +1,2 @@
+?- silnia(3,S).
+?- silnia(2,2).

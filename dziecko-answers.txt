@@ -1,0 +1,27 @@
+?- trace.
+true.
+
+[trace]  ?- p(X,Y).
+   Call: (10) p(_16908, _16910) ? creep
+   Exit: (10) p(a, d) ? creep
+X = a,
+Y = d ;
+   Redo: (10) p(_16908, _16910) ? creep
+   Call: (11) q(_16908, _21368) ? creep
+   Exit: (11) q(a, b) ? creep
+   Call: (11) r(b, _16910) ? creep
+   Exit: (11) r(b, c) ? creep
+   Exit: (10) p(a, c) ? creep
+X = a,
+Y = c ;
+   Redo: (11) q(_16908, _21368) ? creep
+   Exit: (11) q(c, a) ? creep
+   Call: (11) r(a, _16910) ? creep
+   Exit: (11) r(a, d) ? creep
+   Exit: (10) p(c, d) ? creep
+X = c,
+Y = d.
+
+---------
+
+

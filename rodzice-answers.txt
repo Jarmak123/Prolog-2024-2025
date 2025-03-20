@@ -1,0 +1,19 @@
+?- przodek(borys,jacek).
+true 
+-------
+?- przodek(maria,X).
+X = ania ;
+X = jacek ;
+X = basia.
+---------
+?- przodek(X,basia).
+X = ania ;
+X = jan ;
+X = stefan ;
+X = maria ;
+X = borys.
+---------
+?- przodek(jacek,_).
+false.
+---------
+
