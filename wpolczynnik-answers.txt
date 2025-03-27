@@ -1,0 +1,26 @@
+?- wielomian(y,y).
+true ;
+false.
+--
+?- wielomian(5,x).
+true.
+--
+?- wielomian(2*x,x).
+true ;
+false.
+--
+?- wielomian(5*x+1,x).
+true ;
+false.
+--
+?- wielomian(x^3+5,x).
+true ;
+false.
+--
+?- wielomian((6*y+2)*y,y).
+true ;
+false.
+--
+?- wielomian(y^(-2),y).
+false.
+--

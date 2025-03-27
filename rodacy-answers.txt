@@ -1,0 +1,4 @@
+?- rodacy(martyna,pawel
+|    ).
+true.
+--

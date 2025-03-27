@@ -1,0 +1,11 @@
+?- stwielomian(y,y,1).
+true ;
+false.
+---
+?- stwielomian(5,x,0).
+true.
+---
+?- stwielomian(7,y,N).
+N = 0.
+---
+stwielomian(3*x+1,x,N).
