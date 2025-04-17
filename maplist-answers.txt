@@ -1,0 +1,5 @@
+?- wieksza_lista([5,4],[3,2]).
+true.
+----
+?- wieksza_lista([2,1],[5,8]).
+false.
